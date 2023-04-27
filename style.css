@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+  display: flex;
+  max-width: 600px;
+}
+
+.card__img {
+  flex: 1;
+  padding: 2rem;
+  background-image: url(images/image-product-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+.card__text {
+  flex: 1;
+  min-width: 50%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0 8px 8px 0;
+}
+
+.card__text > :not(:first-child) {
+  margin-top: 2rem;
+}
+
+.card__text__category,
+.card__text p,
+.old__price {
+  color: hsl(228, 12%, 48%);
+}
+
+.card__text__category {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.card__text h1 {
+  font-family: 'Fraunces', serif;
+  text-transform: capitalize;
+  color: hsl(212, 21%, 14%);
+  line-height: 2rem;
+}
+
+.card__text p {
+  line-height: 1.6rem;
+}
+
+.card__text__price {
+  display: flex;
+  align-items: center;
+}
+
+.new__price {
+  color: hsl(158, 36%, 37%);
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+}
+
+.old__price {
+  text-decoration: line-through;
+  margin-left: 1.5rem;
+}
+
+.add__to__cart {
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add__to__cart img {
+  margin-right: 0.8rem;
+}
+
+.add__to__cart:hover {
+  cursor: pointer;
+  background-color: hsl(159, 36%, 22%);
+}
+
+@media (max-width: 550px) {
+  .card {
+    max-width: 90%;
+    flex-direction: column;
+  }
+
+  .card__img {
+    padding: 9rem;
+    background-image: url(images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card__text {
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .card__text > :not(:first-child) {
+    margin-top: 1.4rem;
+  }
+}
